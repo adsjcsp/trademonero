@@ -1,19 +1,20 @@
-from ext.config import title
 import os
+
+#conecta ao bancod de dados para colocar os dados nas paginas web
 from ext.db import conexao as banco
-from flask import Flask, render_template, request
-from flask import redirect as direcionar_site
+banco.conexao_banco_de_dados()
 
-nome = banco
-nome.banco.execute('select * from login')
+banco.criar_tabelas()
 
-
-
-
-#app = Flask(__name__)
+#Aplicação do nome do titulo nas poaginas de internet
+from ext.config import title
 title = title()
 
+
+#cria o app do flask para funcionar na web
 def create_app():
+	from flask import Flask, render_template, request
+	from flask import redirect as direcionar_site
 
 	"""Creates a new Flask app"""
 
