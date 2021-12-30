@@ -5,7 +5,10 @@ from flask import Flask, render_template, request
 from flask import redirect as direcionar_site
 
 nome = banco
-nome.banco.execute('select * from teste')
+nome.banco.execute('select * from login')
+
+
+
 
 #app = Flask(__name__)
 title = title()
