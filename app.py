@@ -1,20 +1,24 @@
 import os
+from flask import Flask, render_template, request, redirect as direcionar_site
+from ext.config import title
+import ext.db.conexao as conectar
 
 '''conecta ao bancod de dados para colocar os dados nas paginas web'''
 
+
 '''Aplicação do nome do titulo nas poaginas de internet'''
-from ext.config import title
+
 
 '''cria o app do flask para funcionar na web'''
-def create_app():
-	from flask import Flask, render_template, request, redirect as direcionar_site
 
+
+def create_app():
 	"""Creates a new Flask app"""
 
 	app = Flask(__name__)
 	app.config['SECRET_KEY'] = 'v1rj@0d0@gr3st3'
 
-	#extenção adicionada no flask
+	'''extenção adicionada no flask'''
 
 	@app.route("/")
 	def index():
