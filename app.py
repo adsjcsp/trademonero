@@ -7,8 +7,6 @@ from flask import redirect as direcionar_site
 nome = banco
 nome.banco.execute('select * from teste')
 
-
-
 #app = Flask(__name__)
 title = title()
 
