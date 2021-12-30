@@ -12,7 +12,7 @@ def criar_tabelas():
    
     #abrir arquivo sql
     with open('./ext/db/schema.sql', 'r') as f:
-        f.readline()
+        f.readlines()
         
     return print(f)
         

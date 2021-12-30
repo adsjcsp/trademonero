@@ -1,10 +1,6 @@
 import os
 
 #conecta ao bancod de dados para colocar os dados nas paginas web
-from ext.db import conexao as banco
-banco.conexao_banco_de_dados()
-
-banco.criar_tabelas()
 
 #Aplicação do nome do titulo nas poaginas de internet
 from ext.config import title

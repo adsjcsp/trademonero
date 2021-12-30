@@ -1,11 +1,20 @@
-DROP if exist login
+DROP NOT NULL login
+
 
 CREATE TABLE login (
-
-    id int not null AUTOINCREMENT PRIMARY KEY,
-    nome char,
-    login char,
-    senha char,
+    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(25) NOT NULL,
+    apelido VARCHAR(12) NOT NULL,
+    senha VARCHAR(12) NOT NULL,
     idade date,
     data_de_init CURRENT_DATE
-)
+);
+
+CREATE TABLE clientes(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    Nome VARCHAR(100) NOT NULL,
+    CPF VARCHAR(11) NOT NULL,
+    Email VARCHAR(20) NOT NULL,
+    Fone VARCHAR(20),
+    UF VARCHAR(2) NOT NULL
+    );
