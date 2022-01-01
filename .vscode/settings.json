@@ -1,11 +1,4 @@
 {
-    "sqltools.connections": [
-        {
-            "previewLimit": 50,
-            "driver": "SQLite",
-            "database": "${workspaceFolder:trademonero}/ext/db/bancodedados.db",
-            "name": "Teste"
-        }
-    ],
-    "sqltools.useNodeRuntime": true
+    "sqltools.connections": [],
+    
 }

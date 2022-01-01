@@ -1,17 +1,29 @@
 <html>
-    {% extends 'bar.html' %}
+
+    {% extends 'base.html' %}
 
     <head>
-    <title>{{title}}</title>
-</head>
+    
+        <title>{{title}}</title>
 
-<h1>Olaaaaaaaaaaaaaaaa </h1>
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    
+    </head>
 
 {% block container %}
 
+<body>
+
 Vamos fazer um trade de valor???
+ 
+<input list="fruit">
+    <datalist id="fruit">
+        <option value="apple">
+        <option value="banana">
+        <option value="orange">
+    </datalist>
 
+</body>
 {% endblock %}
-
-
-</html>
+</html>s

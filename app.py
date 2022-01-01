@@ -1,7 +1,7 @@
-import os
-from flask import Flask, render_template, request, redirect as direcionar_site
-from ext.config import title
-import ext.db.conexao as conectar
+from flask import Flask, render_template, redirect as direcionar_site
+
+from ext.config.html import title
+
 
 '''conecta ao bancod de dados para colocar os dados nas paginas web'''
 
@@ -12,9 +12,8 @@ import ext.db.conexao as conectar
 '''cria o app do flask para funcionar na web'''
 
 
+"""Creates a new Flask app"""
 def create_app():
-	"""Creates a new Flask app"""
-
 	app = Flask(__name__)
 	app.config['SECRET_KEY'] = 'v1rj@0d0@gr3st3'
 
@@ -26,11 +25,11 @@ def create_app():
 
 	@app.route("/login")
 	def login():
-		return render_template('sobre.html', title=title())
+		return render_template('login.html', title=title())
 
-	@app.route("/lotofacil")
+	@app.route("/contato")
 	def lotofacil():
-		return render_template('lotofacil.html', title=title())
+		return render_template('contato.html', title=title())
 
 	@app.route("/sobre")
 	def sobre():
