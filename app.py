@@ -1,5 +1,4 @@
 from flask import Flask, render_template, redirect as direcionar_site
-
 from ext.config.html import title
 
 
